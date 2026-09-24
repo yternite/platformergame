@@ -1,6 +1,7 @@
 using System;
 using JetBrains.Annotations;
 using Unity.Cinemachine;
+using Unity.Mathematics;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
@@ -19,6 +20,7 @@ public class PlayerMovement : MonoBehaviour
     public CinemachineInputAxisController axisController;
     public InputAction mouseAction;
     public Transform target;
+    public quaternion doelRotatie;
     
     
     void Start()
@@ -35,7 +37,7 @@ public class PlayerMovement : MonoBehaviour
         {
             axisController.enabled = true;
         }
-        //turns it off when it isnt
+        //turns it off when it isn't
         else
         {
             axisController.enabled = false;
@@ -56,15 +58,22 @@ public class PlayerMovement : MonoBehaviour
       
       //combo
       richting = camera.forward * moveInput.y + camera.right * moveInput.x;
-      
-      Vector3 relativePos = target.position - transform.position;
-      
-     Quaternion rotation = Quaternion.LookRotation(relativePos, Vector3.up);
-      transform.rotation = rotation; 
+      //zorgt ervoor dat speler alleen horizontaal meegaat
+      richting.y = 0;
+
+      //want richting is een vector kan het nii onder de getal zijn zonder magnitude
+      if (richting.magnitude > 0.1)
+      {
+          richting.Normalize();
+          doelRotatie = quaternion.LookRotation(richting, Vector3.up);
+          //zet naar doelobject
+          this.gameObject.transform.rotation = doelRotatie;
+      }
     }
 
     private void OnEnable()
     {
+        //je kan springen
         jump.Enable();
     }
 
@@ -74,13 +83,13 @@ public class PlayerMovement : MonoBehaviour
         {
             Debug.Log("Jump");
             //if its below the air(?) it jumps
-            if (gameObject.transform.position.y < 1.5)
+            if (gameObject.transform.position.y < 2.5)
             {
                 rb.AddForce(Vector3.up * jumpForce, ForceMode.Impulse);
             }
         }
 
-        //rb.linearVelocity = new Vector3(moveInput.x * speed, rb.linearVelocity.y, moveInput.y * speed) ;
+        //*rb.linearVelocity = new Vector3(moveInput.x * speed, rb.linearVelocity.y, moveInput.y * speed) ;
         
         //camera follows with walking
         rb.linearVelocity = new Vector3(richting.x * speed, rb.linearVelocity.y, richting.z * speed);
