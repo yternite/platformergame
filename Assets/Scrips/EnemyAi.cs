@@ -28,15 +28,33 @@ public class EnemyAi : MonoBehaviour
         switch (huidigeState)
         {
             case VijandState.Patrouilleren:
+                Patrouilleren();
                 break;
             
             case VijandState.Achtervolgen:
+                Achtervolgen();
                 break;
             
             case VijandState.Aanvallen:
+                Aanvallen();
                 break;
                 
         }
+    }
+
+    public void Patrouilleren()
+    {
+        
+    }
+
+    public void Achtervolgen()
+    {
+        
+    }
+
+    public void Aanvallen()
+    {
+        
     }
 
     public void ZetState(VijandState nieuweState)
