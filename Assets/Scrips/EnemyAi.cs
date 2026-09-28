@@ -16,15 +16,15 @@ public class EnemyAi : MonoBehaviour
     public NavMeshAgent agent;
     public Transform player;
     public List<Transform> patrouillePunten;
-    public float huidigePunt = 0;
-    public float afstandTotPunt;
+    public int huidigePunt = 0;
+    private float afstandTotPunt;
     private float zichtAfstand = 10;
     private float aanvalAfstand = 2;
-    public float afstand;
+    private float afstand;
     private float aanvalCooldown = 1.5f;
     public float tijdTotVolgendeAanval = 0;
-    public Vector3 kijkRichting;
-    public Animation animator;
+    private Vector3 kijkRichting;
+    public Animator animator;
 
     
         
@@ -34,7 +34,7 @@ public class EnemyAi : MonoBehaviour
     {
         //haalt mesh op
         agent = GetComponent<NavMeshAgent>();
-        animator = GetComponent<Animation>();
+        
     }
 
     void Update()
@@ -68,21 +68,21 @@ public class EnemyAi : MonoBehaviour
                         break;
                 }
 
-        //animator.SetFloat("Speed", agent.velocity.magnitude);
+        animator.SetFloat("Speed", agent.velocity.magnitude);
     }
 
     public void Patrouilleren()
     //loopt langs plekken)
     {
-        agent.isStopped = true;
-        agent.SetDestination(patrouillePunten[0].position);
+        //agent.isStopped = true;
+        agent.SetDestination(patrouillePunten[huidigePunt].position);
         
         //waar ik ben ongeveer?
         //afstand tussen mijn positie en het punt
-        afstandTotPunt = Vector3.Distance(transform.position, patrouillePunten[0].position);
-        if (afstandTotPunt < 1.5)
+        afstandTotPunt = Vector3.Distance(transform.position, patrouillePunten[huidigePunt].position);
+        if (afstandTotPunt < 1f)
         {
-            huidigePunt = +1;
+            huidigePunt += 1;
             if (huidigePunt == patrouillePunten.Count)
             {
                 huidigePunt = 0;
