@@ -28,6 +28,7 @@ public class PlayerMovement : MonoBehaviour
         rb = GetComponent<Rigidbody>();
         moveAction.Enable();
         mouseAction.Enable();
+        
     }
 
     void Update()

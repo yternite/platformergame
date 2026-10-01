@@ -19,15 +19,15 @@ public class EnemyAi : MonoBehaviour
     public int huidigePunt = 0;
     private float afstandTotPunt;
     private float zichtAfstand = 10;
-    private float aanvalAfstand = 2;
+    private float aanvalAfstand = 5;
     private float afstand;
     private float aanvalCooldown = 1.5f;
     public float tijdTotVolgendeAanval = 0;
     private Vector3 kijkRichting;
     public Animator animator;
+   
 
     
-        
         
         
     void Start()
@@ -69,9 +69,11 @@ public class EnemyAi : MonoBehaviour
                 }
 
         animator.SetFloat("Speed", agent.velocity.magnitude);
+       // animator.SetBool("Attacking", Attacking);
+        animator.SetBool("Attacking", huidigeState == VijandState.Aanvallen);
     }
 
-    public void Patrouilleren()
+    private void Patrouilleren()
     //loopt langs plekken)
     {
         //agent.isStopped = true;
@@ -91,8 +93,9 @@ public class EnemyAi : MonoBehaviour
 
     }
 
-    public void Achtervolgen()
+    private void Achtervolgen()
     {
+      
         agent.isStopped = false;
         agent.SetDestination(player.position);
     }
@@ -117,9 +120,9 @@ public class EnemyAi : MonoBehaviour
         
     }
 
-    public void ZetState(VijandState nieuweState)
+    private void ZetState(VijandState nieuweState)
     {
-        if (nieuweState == huidigeState)
+        if (nieuweState != huidigeState)
         {
             huidigeState = nieuweState;
         }
