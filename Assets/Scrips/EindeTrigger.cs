@@ -1,19 +1,15 @@
+using System;
 using UnityEngine;
 
 public class EindeTrigger : MonoBehaviour
 {
-    // Start is called once before the irst execution of Update after the MonoBehaviour is created
-    void Start()
+   public GameManager gameManager;
+    public void OnTriggerEnter(Collider other)
     {
-
+        if (other.tag == "Player")
+        {
+           gameManager.BeeindigSpel();
+        }
     }
-
-    // Update is called once per frame
-    void Update()
-    {
-
-    }
-
-
 }
 
