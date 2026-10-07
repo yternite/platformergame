@@ -84,7 +84,7 @@ public class PlayerMovement : MonoBehaviour
         {
             Debug.Log("Jump");
             //if its below the air(?) it jumps
-            if (gameObject.transform.position.y < 2.5)
+            if (gameObject.transform.position.y < 5.5)
             {
                 rb.AddForce(Vector3.up * jumpForce, ForceMode.Impulse);
             }
@@ -94,7 +94,6 @@ public class PlayerMovement : MonoBehaviour
         
         //camera follows with walking
         rb.linearVelocity = new Vector3(richting.x * speed, rb.linearVelocity.y, richting.z * speed);
-
     }
 }
 
