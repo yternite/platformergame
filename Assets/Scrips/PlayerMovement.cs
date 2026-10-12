@@ -20,7 +20,8 @@ public class PlayerMovement : MonoBehaviour
     public CinemachineInputAxisController axisController;
     public InputAction mouseAction;
     public Transform target;
-    public quaternion doelRotatie;
+    private quaternion doelRotatie;
+    [SerializeField] private SoundManager soundManager;
     
     
     void Start()
