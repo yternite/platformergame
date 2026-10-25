@@ -1,16 +1,20 @@
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class GameManager : MonoBehaviour
 
 {
-
     [SerializeField] public GameObject menuScherm;
     [SerializeField] public GameObject spelScherm;
-    [SerializeField] public GameObject eindeScherm;
+    [SerializeField] public GameObject deathScherm;
+    [SerializeField] public GameObject winnerScherm;
+    
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
+        
+      // SceneManager.LoadScene("Scenes/Menu");
         ToonMenu();
     }
 
@@ -18,7 +22,8 @@ public class GameManager : MonoBehaviour
     {
         menuScherm.SetActive(true);
         spelScherm.SetActive(false);
-        eindeScherm.SetActive(false);
+        deathScherm.SetActive(false);
+        winnerScherm.SetActive(false);
         
         //staat still
         Time.timeScale = 0;
@@ -29,24 +34,42 @@ public class GameManager : MonoBehaviour
     {
         menuScherm.SetActive(false);
         spelScherm.SetActive(true);
-        eindeScherm.SetActive(false);
+        deathScherm.SetActive(false);
+        winnerScherm.SetActive(false);
+       
+       // SceneManager.LoadScene("Scenes/level1");
         
         //staat niet meer steel
         Time.timeScale = 1;
     }
 
-    public void BeeindigSpel()
+    public void Doodgegeaan()
     { 
         menuScherm.SetActive(false);
-        eindeScherm.SetActive(true);
+        deathScherm.SetActive(true);
         spelScherm.SetActive(false);
+        winnerScherm.SetActive(false);
         
         //alles staat still
+        Time.timeScale = 0;
+    }
+
+    public void Winnerswin()
+    {
+        menuScherm.SetActive(false);
+        spelScherm.SetActive(false);
+        deathScherm.SetActive(false);
+        winnerScherm.SetActive(true);
+        
         Time.timeScale = 0;
     }
 
     public void OpnieuwBeginnen()
     {
         Time.timeScale = 1;
+        SceneManager.LoadScene(SceneManager.GetActiveScene().name);
     }
+    
+    
+    
 }

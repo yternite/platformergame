@@ -25,16 +25,17 @@ public class EnemyAi : MonoBehaviour
     public float tijdTotVolgendeAanval = 0;
     private Vector3 kijkRichting;
     public Animator animator;
-   
-
-    
+    public Health playerHealth;
+    private float timer;
+    [SerializeField] public float damage;
         
         
     void Start()
     {
         //haalt mesh op
         agent = GetComponent<NavMeshAgent>();
-        
+        playerHealth = GameObject.FindWithTag("Player").GetComponent<Health>();
+        timer = 5f;
     }
 
     void Update()
@@ -116,6 +117,16 @@ public class EnemyAi : MonoBehaviour
         {
             Debug.Log("aanval");
             tijdTotVolgendeAanval = aanvalCooldown;
+        }
+        
+        if (timer > 0f)
+        {
+            timer -= Time.deltaTime;
+        }
+        else
+        {
+            playerHealth.TakeDamage(damage);
+            timer = aanvalCooldown;
         }
         
     }

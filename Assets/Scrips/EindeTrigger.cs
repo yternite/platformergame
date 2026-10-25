@@ -8,7 +8,7 @@ public class EindeTrigger : MonoBehaviour
     {
         if (other.tag == "Player")
         {
-           gameManager.BeeindigSpel();
+           gameManager.Doodgegeaan();
         }
     }
 }

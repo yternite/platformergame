@@ -20,7 +20,7 @@ public class PlayerMovement : MonoBehaviour
     public CinemachineInputAxisController axisController;
     public InputAction mouseAction;
     public Transform target;
-    private quaternion doelRotatie;
+    private quaternion doelRotatie; 
     [SerializeField] private SoundManager soundManager;
     
     
@@ -29,6 +29,7 @@ public class PlayerMovement : MonoBehaviour
         rb = GetComponent<Rigidbody>();
         moveAction.Enable();
         mouseAction.Enable();
+        
         
     }
 
