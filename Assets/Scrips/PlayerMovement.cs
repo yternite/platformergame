@@ -64,9 +64,10 @@ public class PlayerMovement : MonoBehaviour
       //zorgt ervoor dat speler alleen horizontaal meegaat
       richting.y = 0;
 
-      //want richting is een vector kan het nii onder de getal zijn zonder magnitude
+     //
       if (richting.magnitude > 0.1)
       {
+          //makes it face the targetdirection
           richting.Normalize();
           doelRotatie = quaternion.LookRotation(richting, Vector3.up);
           //zet naar doelobject
