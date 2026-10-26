@@ -4,7 +4,7 @@ public class SoundManager : MonoBehaviour
 {
     public AudioSource bron;
     public AudioClip springGeluid;
-    public AudioClip landGeluid;
+    public AudioClip collectGeluid;
     public AudioClip stapGeluid;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
@@ -20,7 +20,7 @@ public class SoundManager : MonoBehaviour
 
     public void SpeelLand()
     {
-        bron.PlayOneShot(landGeluid);
+        bron.PlayOneShot(collectGeluid);
     }
 
     public void SpeelStap()
