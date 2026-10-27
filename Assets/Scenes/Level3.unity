@@ -3198,6 +3198,70 @@ Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 0aac6822429484b50b4255786677240a, type: 3}
   m_PrefabInstance: {fileID: 734913030}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &737830209
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 737830211}
+  - component: {fileID: 737830210}
+  m_Layer: 0
+  m_Name: navigatie
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &737830210
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 737830209}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7a5ac11cc976e418e8d13136b07e1f52, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Unity.AI.Navigation::Unity.AI.Navigation.NavMeshSurface
+  m_SerializedVersion: 0
+  m_AgentTypeID: 0
+  m_CollectObjects: 0
+  m_Size: {x: 10, y: 10, z: 10}
+  m_Center: {x: 0, y: 2, z: 0}
+  m_LayerMask:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_UseGeometry: 0
+  m_DefaultArea: 0
+  m_GenerateLinks: 0
+  m_IgnoreNavMeshAgent: 1
+  m_IgnoreNavMeshObstacle: 1
+  m_OverrideTileSize: 0
+  m_TileSize: 256
+  m_OverrideVoxelSize: 0
+  m_VoxelSize: 0.16666667
+  m_MinRegionArea: 2
+  m_NavMeshData: {fileID: 23800000, guid: 327165c35141848b4921cce8f79b6b54, type: 2}
+  m_BuildHeightMesh: 0
+--- !u!4 &737830211
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 737830209}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &751925165
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -6042,14 +6106,14 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::EnemyAi
   huidigeState: 0
   agent: {fileID: 1243343111}
-  player: {fileID: 0}
+  player: {fileID: 1700548977}
   patrouillePunten:
   - {fileID: 235075347}
   - {fileID: 138042262}
   huidigePunt: 0
   tijdTotVolgendeAanval: 0
   animator: {fileID: 734913031}
-  playerHealth: {fileID: 0}
+  playerHealth: {fileID: 1700548978}
   damage: 10
 --- !u!4 &1243343113
 Transform:
@@ -6675,7 +6739,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::EnemyAi
   huidigeState: 0
   agent: {fileID: 1354470082}
-  player: {fileID: 0}
+  player: {fileID: 1700548977}
   patrouillePunten:
   - {fileID: 1643058488}
   - {fileID: 1138678948}
@@ -6685,7 +6749,7 @@ MonoBehaviour:
   huidigePunt: 0
   tijdTotVolgendeAanval: 0
   animator: {fileID: 1231963379}
-  playerHealth: {fileID: 0}
+  playerHealth: {fileID: 1700548978}
   damage: 20
 --- !u!4 &1354470084
 Transform:
@@ -8168,6 +8232,7 @@ GameObject:
   - component: {fileID: 1700548980}
   - component: {fileID: 1700548979}
   - component: {fileID: 1700548978}
+  - component: {fileID: 1700548983}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -8208,28 +8273,13 @@ MonoBehaviour:
   OnDeath:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 960085229}
         m_TargetAssemblyTypeName: GameManager, Assembly-CSharp
         m_MethodName: Doodgegeaan
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-  OnHealthChange:
-    m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 0}
-        m_TargetAssemblyTypeName: 
-        m_MethodName: 
-        m_Mode: 0
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: 
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
@@ -8434,27 +8484,9 @@ MonoBehaviour:
       m_Flags: 8
     m_Flags: 0
   speed: 5
-  camera: {fileID: 0}
+  camera: {fileID: 943947268}
   camVooruit: {x: 0, y: 0}
   camRechts: {x: 0, y: 0}
-  axisController: {fileID: 947550329}
-  mouseAction:
-    m_Name: Mouse
-    m_Type: 0
-    m_ExpectedControlType: 
-    m_Id: 5b1fadd2-3cf5-486c-bff2-336d5610d586
-    m_Processors: 
-    m_Interactions: 
-    m_SingletonActionBindings:
-    - m_Name: 
-      m_Id: 2d44e03d-88a4-4c6d-ab6e-fa253d56081e
-      m_Path: <Mouse>/rightButton
-      m_Interactions: 
-      m_Processors: 
-      m_Groups: 
-      m_Action: Mouse
-      m_Flags: 0
-    m_Flags: 0
   target: {fileID: 1700548977}
   soundManager: {fileID: 0}
 --- !u!54 &1700548982
@@ -8484,6 +8516,28 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 112
   m_CollisionDetection: 0
+--- !u!114 &1700548983
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1700548976}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5f247c2aef9bd40c086e22e9f3e28a8b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::CameraMovement
+  mouseAction:
+    m_Name: Mouse
+    m_Type: 0
+    m_ExpectedControlType: 
+    m_Id: 1b91682d-d9b5-4eb2-b40f-6e70bdd33c03
+    m_Processors: 
+    m_Interactions: 
+    m_SingletonActionBindings: []
+    m_Flags: 0
+  axisController: {fileID: 947550329}
 --- !u!1001 &1714584915
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -10513,3 +10567,4 @@ SceneRoots:
   - {fileID: 258152328}
   - {fileID: 1631757433}
   - {fileID: 2031132324}
+  - {fileID: 737830211}

@@ -4065,6 +4065,7 @@ GameObject:
   - component: {fileID: 1225152490}
   - component: {fileID: 1225152489}
   - component: {fileID: 1225152488}
+  - component: {fileID: 1225152494}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -4096,21 +4097,6 @@ MonoBehaviour:
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-  OnHealthChange:
-    m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 0}
-        m_TargetAssemblyTypeName: 
-        m_MethodName: 
-        m_Mode: 0
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: 
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
@@ -4318,24 +4304,6 @@ MonoBehaviour:
   camera: {fileID: 264076519}
   camVooruit: {x: 0, y: 0}
   camRechts: {x: 0, y: 0}
-  axisController: {fileID: 238195747}
-  mouseAction:
-    m_Name: Mouse
-    m_Type: 0
-    m_ExpectedControlType: 
-    m_Id: 5b1fadd2-3cf5-486c-bff2-336d5610d586
-    m_Processors: 
-    m_Interactions: 
-    m_SingletonActionBindings:
-    - m_Name: 
-      m_Id: 2d44e03d-88a4-4c6d-ab6e-fa253d56081e
-      m_Path: <Mouse>/rightButton
-      m_Interactions: 
-      m_Processors: 
-      m_Groups: 
-      m_Action: Mouse
-      m_Flags: 0
-    m_Flags: 0
   target: {fileID: 1225152493}
   soundManager: {fileID: 0}
 --- !u!54 &1225152492
@@ -4381,6 +4349,28 @@ Transform:
   - {fileID: 1321561221}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 146.397, z: 0}
+--- !u!114 &1225152494
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1225152487}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5f247c2aef9bd40c086e22e9f3e28a8b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::CameraMovement
+  mouseAction:
+    m_Name: Mouse
+    m_Type: 0
+    m_ExpectedControlType: 
+    m_Id: b9288c02-1bb0-4cf7-b246-6f9b88ce905a
+    m_Processors: 
+    m_Interactions: 
+    m_SingletonActionBindings: []
+    m_Flags: 0
+  axisController: {fileID: 238195747}
 --- !u!1 &1315633333
 GameObject:
   m_ObjectHideFlags: 0

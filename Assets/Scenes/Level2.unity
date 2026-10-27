@@ -4148,6 +4148,7 @@ GameObject:
   - component: {fileID: 1114413353}
   - component: {fileID: 1114413352}
   - component: {fileID: 1114413351}
+  - component: {fileID: 1114413357}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -4179,21 +4180,6 @@ MonoBehaviour:
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-  OnHealthChange:
-    m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 0}
-        m_TargetAssemblyTypeName: 
-        m_MethodName: 
-        m_Mode: 0
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: 
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
@@ -4401,24 +4387,6 @@ MonoBehaviour:
   camera: {fileID: 1319182628}
   camVooruit: {x: 0, y: 0}
   camRechts: {x: 0, y: 0}
-  axisController: {fileID: 549872336}
-  mouseAction:
-    m_Name: Mouse
-    m_Type: 0
-    m_ExpectedControlType: 
-    m_Id: 5b1fadd2-3cf5-486c-bff2-336d5610d586
-    m_Processors: 
-    m_Interactions: 
-    m_SingletonActionBindings:
-    - m_Name: 
-      m_Id: 2d44e03d-88a4-4c6d-ab6e-fa253d56081e
-      m_Path: <Mouse>/rightButton
-      m_Interactions: 
-      m_Processors: 
-      m_Groups: 
-      m_Action: Mouse
-      m_Flags: 0
-    m_Flags: 0
   target: {fileID: 1114413356}
   soundManager: {fileID: 0}
 --- !u!54 &1114413355
@@ -4464,6 +4432,28 @@ Transform:
   - {fileID: 1675997484}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 146.397, z: 0}
+--- !u!114 &1114413357
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1114413350}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5f247c2aef9bd40c086e22e9f3e28a8b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::CameraMovement
+  mouseAction:
+    m_Name: Mouse
+    m_Type: 0
+    m_ExpectedControlType: 
+    m_Id: 8dbb9b89-0d7f-4946-8f9b-888ead65b2c9
+    m_Processors: 
+    m_Interactions: 
+    m_SingletonActionBindings: []
+    m_Flags: 0
+  axisController: {fileID: 549872336}
 --- !u!1 &1200128237
 GameObject:
   m_ObjectHideFlags: 0
@@ -5528,6 +5518,73 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!1 &1354029210
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1354029213}
+  - component: {fileID: 1354029212}
+  - component: {fileID: 1354029211}
+  m_Layer: 0
+  m_Name: Windzone
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1354029211
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1354029210}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a5d0941f3926245568e3de7691e4db97, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::WindZone
+  windStrength: 10
+--- !u!65 &1354029212
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1354029210}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 25.719875, y: 19.033127, z: 22.875296}
+  m_Center: {x: 4.3176637, y: 9.016605, z: -4.4288616}
+--- !u!4 &1354029213
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1354029210}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: 0.13405757, z: -0, w: 0.99097353}
+  m_LocalPosition: {x: -165.55, y: 0, z: 54.57}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 15.408, z: 0}
 --- !u!1 &1368716877
 GameObject:
   m_ObjectHideFlags: 0
@@ -8935,3 +8992,4 @@ SceneRoots:
   - {fileID: 199028152}
   - {fileID: 1866321026}
   - {fileID: 316539954}
+  - {fileID: 1354029213}

@@ -1321,7 +1321,7 @@ MonoBehaviour:
   menuScherm: {fileID: 1267728810}
   spelScherm: {fileID: 1155641484}
   deathScherm: {fileID: 1025176036}
-  winnerScherm: {fileID: 0}
+  winnerScherm: {fileID: 1025176036}
 --- !u!4 &578698560
 Transform:
   m_ObjectHideFlags: 0
@@ -2900,6 +2900,7 @@ GameObject:
   - component: {fileID: 1312864403}
   - component: {fileID: 1312864404}
   - component: {fileID: 1312864405}
+  - component: {fileID: 1312864406}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -3007,24 +3008,6 @@ MonoBehaviour:
   camera: {fileID: 999629353}
   camVooruit: {x: 0, y: 0}
   camRechts: {x: 0, y: 0}
-  axisController: {fileID: 82609463}
-  mouseAction:
-    m_Name: Mouse
-    m_Type: 0
-    m_ExpectedControlType: 
-    m_Id: 5b1fadd2-3cf5-486c-bff2-336d5610d586
-    m_Processors: 
-    m_Interactions: 
-    m_SingletonActionBindings:
-    - m_Name: 
-      m_Id: 2d44e03d-88a4-4c6d-ab6e-fa253d56081e
-      m_Path: <Mouse>/rightButton
-      m_Interactions: 
-      m_Processors: 
-      m_Groups: 
-      m_Action: Mouse
-      m_Flags: 0
-    m_Flags: 0
   target: {fileID: 1312864400}
   soundManager: {fileID: 1672806490}
 --- !u!54 &1312864402
@@ -3204,6 +3187,36 @@ MonoBehaviour:
   OnHealthChange:
     m_PersistentCalls:
       m_Calls: []
+--- !u!114 &1312864406
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1312864399}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5f247c2aef9bd40c086e22e9f3e28a8b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::CameraMovement
+  mouseAction:
+    m_Name: Mouse
+    m_Type: 0
+    m_ExpectedControlType: 
+    m_Id: 42ca1bbf-db05-44a4-8591-08e40c5713ee
+    m_Processors: 
+    m_Interactions: 
+    m_SingletonActionBindings:
+    - m_Name: 
+      m_Id: 2597a6f8-cafb-4ced-9d83-04ba1ca6ab9a
+      m_Path: <Mouse>/rightButton
+      m_Interactions: 
+      m_Processors: 
+      m_Groups: 
+      m_Action: Mouse
+      m_Flags: 0
+    m_Flags: 0
+  axisController: {fileID: 82609463}
 --- !u!1 &1455235169
 GameObject:
   m_ObjectHideFlags: 0
@@ -3595,7 +3608,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::SoundManager
   bron: {fileID: 0}
   springGeluid: {fileID: 0}
-  landGeluid: {fileID: 0}
+  collectGeluid: {fileID: 0}
   stapGeluid: {fileID: 0}
 --- !u!65 &1672806491
 BoxCollider:
