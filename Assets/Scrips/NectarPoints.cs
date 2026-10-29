@@ -5,20 +5,16 @@ using TMPro;
 using System.Collections.Generic;
 
 
-public class NectarPoints : MonoBehaviour
+public class NectarPoints : MonoBehaviour , IPickupable
 {
 
-    private int nectarPoints = 0;
+    public int Points = 0;
     public TextMeshProUGUI scoreText;
 
-
-    private void OnTriggerExit(Collider other)
+    public void PickUp()
     {
-        if (other.tag == "Player")
-        {
-            nectarPoints++;
-            scoreText.text = "Nextar = " + nectarPoints.ToString();
+            Points++;
+            scoreText.text = "Nextar = " + Points.ToString();
             Destroy(gameObject);
-        }
     }
 }

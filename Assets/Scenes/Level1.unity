@@ -951,6 +951,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 31767b30b39b6409398e2536fa3f90dc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::NectarPoints
+  Points: 0
   scoreText: {fileID: 1583294418}
 --- !u!135 &253952370
 SphereCollider:
@@ -1105,6 +1106,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 31767b30b39b6409398e2536fa3f90dc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::NectarPoints
+  Points: 0
   scoreText: {fileID: 1583294418}
 --- !u!135 &254684258
 SphereCollider:
@@ -2148,6 +2150,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 31767b30b39b6409398e2536fa3f90dc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::NectarPoints
+  Points: 0
   scoreText: {fileID: 1583294418}
 --- !u!135 &558047016
 SphereCollider:
@@ -2736,6 +2739,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 31767b30b39b6409398e2536fa3f90dc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::NectarPoints
+  Points: 0
   scoreText: {fileID: 1583294418}
 --- !u!135 &677966791
 SphereCollider:
@@ -3348,6 +3352,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 31767b30b39b6409398e2536fa3f90dc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::NectarPoints
+  Points: 0
   scoreText: {fileID: 1583294418}
 --- !u!135 &908961675
 SphereCollider:
@@ -3502,6 +3507,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 31767b30b39b6409398e2536fa3f90dc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::NectarPoints
+  Points: 0
   scoreText: {fileID: 1583294418}
 --- !u!135 &994637477
 SphereCollider:
@@ -4066,6 +4072,7 @@ GameObject:
   - component: {fileID: 1225152489}
   - component: {fileID: 1225152488}
   - component: {fileID: 1225152494}
+  - component: {fileID: 1225152495}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -4371,6 +4378,18 @@ MonoBehaviour:
     m_SingletonActionBindings: []
     m_Flags: 0
   axisController: {fileID: 238195747}
+--- !u!114 &1225152495
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1225152487}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3c5a3c08ebd9048268970392275f7ad0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::PlayerPickUp
 --- !u!1 &1315633333
 GameObject:
   m_ObjectHideFlags: 0
@@ -4721,6 +4740,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 31767b30b39b6409398e2536fa3f90dc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::NectarPoints
+  Points: 0
   scoreText: {fileID: 1583294418}
 --- !u!135 &1416232336
 SphereCollider:
@@ -5449,6 +5469,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 31767b30b39b6409398e2536fa3f90dc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::NectarPoints
+  Points: 0
   scoreText: {fileID: 1583294418}
 --- !u!135 &1905367043
 SphereCollider:
