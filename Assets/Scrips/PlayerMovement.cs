@@ -32,6 +32,7 @@ public class PlayerMovement : MonoBehaviour
     void Update()
     {
         moveInput = moveAction.ReadValue<Vector2>();
+       
 
        //pakt de camera richtingen en legt ze plat booja
       camVooruit = camera.forward;
@@ -56,6 +57,7 @@ public class PlayerMovement : MonoBehaviour
           //zet naar doelobject
           this.gameObject.transform.rotation = doelRotatie;
       }
+
     }
 
     private void OnEnable()
@@ -68,13 +70,14 @@ public class PlayerMovement : MonoBehaviour
     {
         if (jump.IsPressed())
         {
-            Debug.Log("Jump");
+            soundManager.SpeelSpring();
             
-            if (gameObject.transform.position.y < 5.5)
+            if (gameObject.transform.position.y < 25.5)
             {
                 rb.AddForce(Vector3.up * jumpForce, ForceMode.Impulse);
             }
         }
+        
         
         //camera follows with walking
         rb.linearVelocity = new Vector3(richting.x * speed, rb.linearVelocity.y, richting.z * speed);

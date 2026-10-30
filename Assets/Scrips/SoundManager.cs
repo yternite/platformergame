@@ -18,7 +18,7 @@ public class SoundManager : MonoBehaviour
         bron.PlayOneShot(springGeluid);
     }
 
-    public void SpeelLand()
+    public void SpeelCollect()
     {
         bron.PlayOneShot(collectGeluid);
     }

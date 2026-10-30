@@ -1,20 +1,20 @@
 using System;
 using UnityEngine;
 using UnityEngine.SceneManagement;
-using TMPro;
 using System.Collections.Generic;
 
 
 public class NectarPoints : MonoBehaviour , IPickupable
 {
-
-    public int Points = 0;
-    public TextMeshProUGUI scoreText;
+    private bool collected;
 
     public void PickUp()
     {
-            Points++;
-            scoreText.text = "Nextar = " + Points.ToString();
+        if (collected) return;
+        collected = true;
+
+        //referes to the player pick up without the hasstle 
+            PlayerPickUp.Instance.AddPoints(1);
             Destroy(gameObject);
     }
 }

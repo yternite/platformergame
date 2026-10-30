@@ -152,7 +152,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 31767b30b39b6409398e2536fa3f90dc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::NectarPoints
-  scoreText: {fileID: 1078744525}
 --- !u!135 &42465737
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -954,7 +953,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 31767b30b39b6409398e2536fa3f90dc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::NectarPoints
-  scoreText: {fileID: 1078744525}
 --- !u!135 &315708681
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -1469,7 +1467,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 31767b30b39b6409398e2536fa3f90dc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::NectarPoints
-  scoreText: {fileID: 1078744525}
 --- !u!135 &365648418
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -1670,7 +1667,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 31767b30b39b6409398e2536fa3f90dc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::NectarPoints
-  scoreText: {fileID: 1078744525}
 --- !u!135 &406599714
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -1824,7 +1820,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 31767b30b39b6409398e2536fa3f90dc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::NectarPoints
-  scoreText: {fileID: 1078744525}
 --- !u!135 &410340410
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -2714,7 +2709,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 31767b30b39b6409398e2536fa3f90dc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::NectarPoints
-  scoreText: {fileID: 1078744525}
 --- !u!135 &703600003
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -3090,7 +3084,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 31767b30b39b6409398e2536fa3f90dc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::NectarPoints
-  scoreText: {fileID: 1078744525}
 --- !u!135 &799399773
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -3244,7 +3237,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 31767b30b39b6409398e2536fa3f90dc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::NectarPoints
-  scoreText: {fileID: 1078744525}
 --- !u!135 &807499641
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -4620,7 +4612,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 31767b30b39b6409398e2536fa3f90dc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::NectarPoints
-  scoreText: {fileID: 1078744525}
 --- !u!135 &1257265759
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -5397,7 +5388,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 31767b30b39b6409398e2536fa3f90dc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::NectarPoints
-  scoreText: {fileID: 1078744525}
 --- !u!135 &1347861450
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -5695,7 +5685,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 31767b30b39b6409398e2536fa3f90dc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::NectarPoints
-  scoreText: {fileID: 1078744525}
 --- !u!135 &1376868203
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -5849,7 +5838,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 31767b30b39b6409398e2536fa3f90dc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::NectarPoints
-  scoreText: {fileID: 1078744525}
 --- !u!135 &1397687673
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -6560,7 +6548,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 31767b30b39b6409398e2536fa3f90dc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::NectarPoints
-  scoreText: {fileID: 1078744525}
 --- !u!135 &1669662643
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -6812,7 +6799,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 31767b30b39b6409398e2536fa3f90dc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::NectarPoints
-  scoreText: {fileID: 1078744525}
 --- !u!135 &1693451984
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -6966,7 +6952,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 31767b30b39b6409398e2536fa3f90dc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::NectarPoints
-  scoreText: {fileID: 1078744525}
 --- !u!135 &1722108209
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -7307,7 +7292,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 667182940}
         m_TargetAssemblyTypeName: GameManager, Assembly-CSharp
         m_MethodName: StartSpel
         m_Mode: 1
@@ -8706,7 +8691,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 31767b30b39b6409398e2536fa3f90dc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::NectarPoints
-  scoreText: {fileID: 1078744525}
 --- !u!135 &2110460048
 SphereCollider:
   m_ObjectHideFlags: 0
