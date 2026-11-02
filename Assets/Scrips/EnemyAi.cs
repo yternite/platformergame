@@ -19,7 +19,7 @@ public class EnemyAi : MonoBehaviour
     public int huidigePunt = 0;
     private float afstandTotPunt;
     private float zichtAfstand = 10;
-    private float aanvalAfstand = 5;
+    private float aanvalAfstand = 1;
     private float afstand;
     private float aanvalCooldown = 1.5f;
     public float tijdTotVolgendeAanval = 0;
@@ -70,7 +70,7 @@ public class EnemyAi : MonoBehaviour
                 }
 
         animator.SetFloat("Speed", agent.velocity.magnitude);
-       // animator.SetBool("Attacking", Attacking);
+   
         animator.SetBool("Attacking", huidigeState == VijandState.Aanvallen);
     }
 
@@ -80,7 +80,7 @@ public class EnemyAi : MonoBehaviour
         //agent.isStopped = true;
         agent.SetDestination(patrouillePunten[huidigePunt].position);
         
-        //waar ik ben ongeveer?
+        
         //afstand tussen mijn positie en het punt
         afstandTotPunt = Vector3.Distance(transform.position, patrouillePunten[huidigePunt].position);
         if (afstandTotPunt < 1f)

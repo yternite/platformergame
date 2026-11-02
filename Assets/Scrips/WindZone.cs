@@ -8,7 +8,7 @@ public class WindZone : MonoBehaviour
 
     private void OnTriggerStay(Collider other)
     {
-        if (other.CompareTag("Player"))
+        if (other.tag == "Player")
         {
             Rigidbody rb =  other.GetComponent<Rigidbody>();
             rb.AddForce(Vector3.right * windStrength);

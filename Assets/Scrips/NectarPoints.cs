@@ -7,6 +7,7 @@ using System.Collections.Generic;
 public class NectarPoints : MonoBehaviour , IPickupable
 {
     private bool collected;
+    [SerializeField] private int amount;
 
     public void PickUp()
     {
@@ -14,7 +15,7 @@ public class NectarPoints : MonoBehaviour , IPickupable
         collected = true;
 
         //referes to the player pick up without the hasstle 
-            PlayerPickUp.Instance.AddPoints(1);
+            PlayerPickUp.Instance.AddPoints(amount);
             Destroy(gameObject);
     }
 }
