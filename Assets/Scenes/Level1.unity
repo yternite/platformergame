@@ -951,6 +951,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 31767b30b39b6409398e2536fa3f90dc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::NectarPoints
+  amount: 1
 --- !u!135 &253952370
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -1104,6 +1105,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 31767b30b39b6409398e2536fa3f90dc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::NectarPoints
+  amount: 1
 --- !u!135 &254684258
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -2146,6 +2148,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 31767b30b39b6409398e2536fa3f90dc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::NectarPoints
+  amount: 1
 --- !u!135 &558047016
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -2733,6 +2736,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 31767b30b39b6409398e2536fa3f90dc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::NectarPoints
+  amount: 1
 --- !u!135 &677966791
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -3344,6 +3348,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 31767b30b39b6409398e2536fa3f90dc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::NectarPoints
+  amount: 1
 --- !u!135 &908961675
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -3497,6 +3502,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 31767b30b39b6409398e2536fa3f90dc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::NectarPoints
+  amount: 1
 --- !u!135 &994637477
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -4096,6 +4102,9 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+  OnHealthChange:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!65 &1225152490
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -4640,6 +4649,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 31767b30b39b6409398e2536fa3f90dc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::NectarPoints
+  amount: 1
 --- !u!135 &1416232336
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -5513,6 +5523,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 31767b30b39b6409398e2536fa3f90dc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::NectarPoints
+  amount: 1
 --- !u!135 &1905367043
 SphereCollider:
   m_ObjectHideFlags: 0

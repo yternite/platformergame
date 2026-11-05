@@ -20,19 +20,9 @@ public class Health : MonoBehaviour
             OnDeath.Invoke();
             isDead = true;
         }
-        
         // Als health gelijk is aan 0, roep de OnDeath event aan met .Invoke().
     }
-
-    public void Healh(float amount)
-    {
-        currentHealth += amount;
-        //als de currentHealth > maxHealth
-        //currenthealth = maxhealth
-        OnHealthChange.Invoke(currentHealth, MaxHealth);
-        // Tel op bij current health (niet boven max)
-        // Fire OnHealthChanged met .Invoke();
-    }
+    
     
     
 }
